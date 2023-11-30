@@ -53,3 +53,23 @@ add_filter( 'kntnt-anchor-links-post-id', function( $add_anchor_links, $post_id 
 
 }, 10, 2 );
 ```
+
+## Requirements
+
+This plugin requires PHP 8.0 or later.
+
+## Installation
+
+Follow these instructions to install the plugin.
+
+1. [Download the plugin from GitHub.](https://github.com/Kntnt/kntnt-anchor-links/releases/latest)
+2. Unzip the zip file.
+3. Rename the folder to `kntnt-anchor-links`.
+4. Create a new zip file of the folder.
+5. [Upload the newly created zip file through WordPress Admin](https://wordpress.org/documentation/article/manage-plugins/#upload-via-wordpress-admin).
+
+## Changelog
+
+### 1.0.0
+
+* Initial release
