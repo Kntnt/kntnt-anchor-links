@@ -37,20 +37,10 @@ add_filter( 'kntnt-anchor-links-post-types', function( $post_types ) {
 You can enable or disable anchor links for any post by implementing the filter `kntnt-anchor-links-post-id`:
 
 ```php
-add_filter( 'kntnt-anchor-links-post-id', function( $add_anchor_links, $post_id ) {
-    
-    $posts_to_not_have_anchor_links = [ 123, 456, 789 ];
-    $pages_to_have_anchor_links = [ 321, 654, 987 ];
-    
-    if ( in_array( $post_id, $posts_to_not_have_anchor_links ) ) {
-        $add_anchor_links = false;
-    }
-    elseif ( in_array( $post_id, $pages_to_have_anchor_links ) ) {
-        $add_anchor_links = true;
-    }
-    
-    return $add_anchor_links;
-
+add_filter( 'kntnt-anchor-links-post-id', function ( $do, $post_id ) {
+	$do = 6190 == $post_id ? true : $do;  // Do show  anchor links on post 6190
+	$do = 6303 == $post_id ? false : $do; // Don't show anchor links on post 6303
+	return $do;
 }, 10, 2 );
 ```
 
