@@ -60,6 +60,13 @@ Follow these instructions to install the plugin.
 
 ## Changelog
 
+## 1.0.1
+
+* FIXED: Logical mistake.
+* IMPROVED: Moved icon to CSS.
+* IMPROVED: Cleaned up the code in a few places.
+* IMPROVED: Simplified example of the filter kntnt-anchor-links-post-id
+
 ### 1.0.0
 
 * Initial release
