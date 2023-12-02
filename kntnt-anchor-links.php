@@ -2,14 +2,15 @@
 
 /**
  * @wordpress-plugin
- * Plugin Name:       Kntnt Anchor Links
- * Plugin URI:        https://github.com/Kntnt/kntnt-anchor-links
- * Description:       Adds anchor links to headings.
- * Version:           1.0.1
- * Author:            Thomas Barregren
- * Author URI:        https://www.kntnt.com/
- * License:           GPL-3.0+
- * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Plugin Name:     Kntnt Anchor Links
+ * Plugin URI:      https://github.com/Kntnt/kntnt-anchor-links
+ * Description:     Adds anchor links to headings.
+ * Version:         1.0.1
+ * Author:          Thomas Barregren
+ * Author URI:      https://www.kntnt.com/
+ * License:         GPL-3.0+
+ * License URI:     http://www.gnu.org/licenses/gpl-3.0.txt
+ * Requires PHP:    8.0
  */
 
 namespace Kntnt\Anchor_Links;
