@@ -5,7 +5,7 @@
  * Plugin Name:       Kntnt Anchor Links
  * Plugin URI:        https://github.com/Kntnt/kntnt-anchor-links
  * Description:       Adds anchor links to headings.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Thomas Barregren
  * Author URI:        https://www.kntnt.com/
  * License:           GPL-3.0+
@@ -43,10 +43,7 @@ class Plugin {
 		$post_id   = $post?->ID;
 		$post_type = $post?->post_type;
 
-		$do_id        = apply_filters( 'kntnt-anchor-links-post-id', null, $post_id );
-		$do_post_type = in_array( $post_type, apply_filters( 'kntnt-anchor-links-post-types', $this->default_post_types ) );
-
-		if ( ( isset( $do_id ) && $do_id ) || $do_post_type ) {
+		if ( apply_filters( 'kntnt-anchor-links-post-id', null, $post_id ) ?? in_array( $post_type, apply_filters( 'kntnt-anchor-links-post-types', $this->default_post_types ) ) ) {
 			wp_enqueue_style( 'kntnt-anchor-links.css' );
 			$html = $this->add_anchor_links( $html, $post_id, $post_type );
 		}
@@ -71,6 +68,7 @@ class Plugin {
 			if ( in_array( $level, $heading_levels ) ) {
 				$anchor = sanitize_title( $title );
 				$anchor = '<a href="#' . $anchor . '" aria-hidden="true" class="kntnt-anchor-link" id="' . $anchor . '"></a>';
+
 				return "<h$level$attributes>$anchor$title</h$level>";
 			}
 			else {
